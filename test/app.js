@@ -57,13 +57,13 @@ describe('GET /api/lastfm', () => {
   });
 });
 
-describe('GET /api/twilio', () => {
-  it('should return 200 OK', (done) => {
-    request(app)
-      .get('/api/twilio')
-      .expect(200, done);
-  });
-});
+// describe('GET /api/twilio', () => {
+//   it('should return 200 OK', (done) => {
+//     request(app)
+//       .get('/api/twilio')
+//       .expect(200, done);
+//   });
+// });
 
 describe('GET /api/stripe', () => {
   it('should return 200 OK', (done) => {
