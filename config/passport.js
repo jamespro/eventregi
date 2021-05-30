@@ -122,6 +122,7 @@ passport.use(new SnapchatStrategy({
 /**
  * Sign in with Facebook.
  */
+/*
 passport.use(new FacebookStrategy({
   clientID: process.env.FACEBOOK_ID,
   clientSecret: process.env.FACEBOOK_SECRET,
@@ -178,10 +179,12 @@ passport.use(new FacebookStrategy({
     });
   }
 }));
+ */
 
 /**
  * Sign in with GitHub.
  */
+/*
 passport.use(new GitHubStrategy({
   clientID: process.env.GITHUB_ID,
   clientSecret: process.env.GITHUB_SECRET,
@@ -238,10 +241,11 @@ passport.use(new GitHubStrategy({
     });
   }
 }));
-
+ */
 /**
  * Sign in with Twitter.
  */
+/*
 passport.use(new TwitterStrategy({
   consumerKey: process.env.TWITTER_KEY,
   consumerSecret: process.env.TWITTER_SECRET,
@@ -292,10 +296,11 @@ passport.use(new TwitterStrategy({
     });
   }
 }));
-
+ */
 /**
  * Sign in with Google.
  */
+/*
 const googleStrategyConfig = new GoogleStrategy({
   clientID: process.env.GOOGLE_ID,
   clientSecret: process.env.GOOGLE_SECRET,
@@ -362,10 +367,11 @@ const googleStrategyConfig = new GoogleStrategy({
 });
 passport.use('google', googleStrategyConfig);
 refresh.use('google', googleStrategyConfig);
-
+ */
 /**
  * Sign in with LinkedIn.
  */
+/*
 passport.use(new LinkedInStrategy({
   clientID: process.env.LINKEDIN_ID,
   clientSecret: process.env.LINKEDIN_SECRET,
@@ -420,10 +426,11 @@ passport.use(new LinkedInStrategy({
     });
   }
 }));
-
+ */
 /**
  * Sign in with Instagram.
  */
+/*
 passport.use(new InstagramStrategy({
   clientID: process.env.INSTAGRAM_ID,
   clientSecret: process.env.INSTAGRAM_SECRET,
@@ -473,10 +480,11 @@ passport.use(new InstagramStrategy({
     });
   }
 }));
-
+ */
 /**
  * Twitch API OAuth.
  */
+/*
 const twitchStrategyConfig = new TwitchStrategy({
   clientID: process.env.TWITCH_CLIENT_ID,
   clientSecret: process.env.TWITCH_CLIENT_SECRET,
@@ -544,10 +552,11 @@ const twitchStrategyConfig = new TwitchStrategy({
 });
 passport.use('twitch', twitchStrategyConfig);
 refresh.use('twitch', twitchStrategyConfig);
-
+ */
 /**
  * Tumblr API OAuth.
  */
+/*
 passport.use('tumblr', new OAuthStrategy({
   requestTokenURL: 'https://www.tumblr.com/oauth/request_token',
   accessTokenURL: 'https://www.tumblr.com/oauth/access_token',
@@ -566,10 +575,11 @@ passport.use('tumblr', new OAuthStrategy({
     });
   });
 }));
-
+ */
 /**
  * Foursquare API OAuth.
  */
+/*
 passport.use('foursquare', new OAuth2Strategy({
   authorizationURL: 'https://foursquare.com/oauth2/authorize',
   tokenURL: 'https://foursquare.com/oauth2/access_token',
@@ -587,10 +597,11 @@ passport.use('foursquare', new OAuth2Strategy({
     });
   });
 }));
-
+ */
 /**
  * Steam API OpenID.
  */
+/*
 passport.use(new OpenIDStrategy({
   apiKey: process.env.STEAM_KEY,
   providerURL: 'http://steamcommunity.com/openid',
@@ -647,10 +658,11 @@ passport.use(new OpenIDStrategy({
       });
   }
 }));
-
+ */
 /**
  * Pinterest API OAuth.
  */
+/*
 passport.use('pinterest', new OAuth2Strategy({
   authorizationURL: 'https://api.pinterest.com/oauth/',
   tokenURL: 'https://api.pinterest.com/v1/oauth/token',
@@ -668,10 +680,11 @@ passport.use('pinterest', new OAuth2Strategy({
     });
   });
 }));
-
+ */
 /**
  * Intuit/QuickBooks API OAuth.
  */
+/*
 const quickbooksStrategyConfig = new OAuth2Strategy({
   authorizationURL: 'https://appcenter.intuit.com/connect/oauth2',
   tokenURL: 'https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer',
@@ -712,7 +725,7 @@ const quickbooksStrategyConfig = new OAuth2Strategy({
 });
 passport.use('quickbooks', quickbooksStrategyConfig);
 refresh.use('quickbooks', quickbooksStrategyConfig);
-
+ */
 /**
  * Login Required middleware.
  */
