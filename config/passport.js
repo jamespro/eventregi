@@ -68,6 +68,7 @@ passport.use(new LocalStrategy({ usernameField: 'email' }, (email, password, don
 /**
  * Sign in with Snapchat.
  */
+/*
 passport.use(new SnapchatStrategy({
   clientID: process.env.SNAPCHAT_ID,
   clientSecret: process.env.SNAPCHAT_SECRET,
@@ -117,7 +118,7 @@ passport.use(new SnapchatStrategy({
     });
   }
 }));
-
+*/
 /**
  * Sign in with Facebook.
  */
