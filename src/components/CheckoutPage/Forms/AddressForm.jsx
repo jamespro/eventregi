@@ -2,25 +2,6 @@ import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { InputField, CheckboxField, SelectField } from '../../FormFields';
 
-const cities = [
-  {
-    value: undefined,
-    label: 'None'
-  },
-  {
-    value: '1',
-    label: 'New York'
-  },
-  {
-    value: '2',
-    label: 'Chicago'
-  },
-  {
-    value: '3',
-    label: 'Saigon'
-  }
-];
-
 const states = [
   {
     value: undefined,
@@ -92,10 +73,9 @@ export default function AddressForm(props) {
           <InputField name={address2.name} label={address2.label} fullWidth />
         </Grid>
         <Grid item xs={12} sm={6}>
-          <SelectField
+          <InputField
             name={city.name}
             label={city.label}
-            data={cities}
             fullWidth
           />
         </Grid>

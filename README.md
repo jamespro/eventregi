@@ -7,6 +7,10 @@ Event registration
 - [x] Hook up to database
 - [x] Database: Save submitted information to MongoDB
 - [x] Fix browser error on step 1
+- [ ] Reginfo: Pull Countries from a data source 
+- [ ] Reginfo: Make the data source MongoDB
+- [ ] Reginfo: Can Formik pre-fill fields such as Country?
+- [ ] Reginfo: Can Formik get settings for fields from a data source?
 - [ ] Database: split data into User, Order, Item, Payment
 - [ ] Database: Get form info from database (e.g. fields)
 - [ ] Confirm: Link to return to start
