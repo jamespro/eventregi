@@ -48,9 +48,22 @@ export default function CheckoutPage() {
 
   async function _submitForm(values, actions) {
     //JWP ANYWHERE YOU SEE _sleep function-- it's a placeholder for an API call, so that's where we need to customize/replace
-    await _sleep(1000);
+    //        await _sleep(1000);
     //TODO: JWP here's where I need to send to the database
-      alert(JSON.stringify(values, null, 2));
+    //     console.log(JSON.stringify(values, null, 2));
+    //     alert(JSON.stringify(values, null, 2));
+    
+    //    await SEND {values} WITH AXIOS OR FETCH
+    const requestOptions = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values)
+    }
+      const response = await fetch('https://eventregg.herokuapp.com/api/complete', requestOptions);
+    const data = await response.json();
+      console.log(data);
+    //TODO: Do something after you get a successful response
+      //TODO: display success message, or dialog, or have another page load with instructions, or a configurable redirect URL
     actions.setSubmitting(false);
 
     setActiveStep(activeStep + 1);
