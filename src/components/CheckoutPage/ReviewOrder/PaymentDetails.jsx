@@ -6,7 +6,7 @@ import useStyles from './styles';
 function PaymentDetails(props) {
   const { formValues } = props;
   const classes = useStyles();
-  const { nameOnCard, cardNumber, expiryDate } = formValues;
+  const { nameOnCard, cardNumber, expirationDate } = formValues;
   return (
     <Grid item container direction="column" xs={12} sm={6}>
       <Typography variant="h6" gutterBottom className={classes.title}>
@@ -39,11 +39,11 @@ function PaymentDetails(props) {
         </React.Fragment>
         <React.Fragment>
           <Grid item xs={6}>
-            <Typography gutterBottom>Expiry Date</Typography>
+            <Typography gutterBottom>Expiration Date</Typography>
           </Grid>
           <Grid item xs={6}>
             <Typography gutterBottom>
-              {moment(expiryDate).format('MM/YY')}
+              {moment(expirationDate).format('MM/YY')}
             </Typography>
           </Grid>
         </React.Fragment>

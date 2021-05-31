@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
+      {new Date().getFullYear()}&nbsp; 
+      <Link color="inherit" href="https://eventregi.herokuapp.com/">
+        Event Registration 
       </Link>
-      {new Date().getFullYear()}
     </Typography>
   );
 }

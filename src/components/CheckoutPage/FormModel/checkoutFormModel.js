@@ -55,11 +55,11 @@ export default {
       requiredErrorMsg: 'Card number is required',
       invalidErrorMsg: 'Card number is not valid (e.g. 4111111111111)'
     },
-    expiryDate: {
-      name: 'expiryDate',
-      label: 'Expiry date*',
-      requiredErrorMsg: 'Expiry date is required',
-      invalidErrorMsg: 'Expiry date is not valid'
+    expirationDate: {
+      name: 'expirationDate',
+      label: 'Expiration date*',
+      requiredErrorMsg: 'Expiration date is required',
+      invalidErrorMsg: 'Expiration date is not valid'
     },
     cvv: {
       name: 'cvv',

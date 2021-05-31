@@ -4,7 +4,7 @@ import { InputField, DatePickerField } from '../../FormFields';
 
 export default function PaymentForm(props) {
   const {
-    formField: { nameOnCard, cardNumber, expiryDate, cvv }
+    formField: { nameOnCard, cardNumber, expirationDate, cvv }
   } = props;
 
   return (
@@ -29,8 +29,8 @@ export default function PaymentForm(props) {
         </Grid>
         <Grid item xs={12} md={6}>
           <DatePickerField
-            name={expiryDate.name}
-            label={expiryDate.label}
+            name={expirationDate.name}
+            label={expirationDate.label}
             format="MM/yy"
             views={['year', 'month']}
             minDate={new Date()}

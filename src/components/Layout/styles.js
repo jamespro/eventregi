@@ -7,7 +7,7 @@ import { cyan } from '@material-ui/core/colors';
 
 let theme = createMuiTheme({
   palette: {
-    type: 'dark',
+    type: 'light',
     primary: cyan,
     secondary: cyan
   }

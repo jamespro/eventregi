@@ -10,7 +10,7 @@ const {
     useAddressForPaymentDetails,
     nameOnCard,
     cardNumber,
-    expiryDate,
+    expirationDate,
     cvv
   }
 } = checkoutFormModel;
@@ -25,6 +25,6 @@ export default {
   [useAddressForPaymentDetails.name]: false,
   [nameOnCard.name]: '',
   [cardNumber.name]: '',
-  [expiryDate.name]: '',
+  [expirationDate.name]: '',
   [cvv.name]: ''
 };

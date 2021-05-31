@@ -20,7 +20,7 @@ import formInitialValues from './FormModel/formInitialValues';
 
 import useStyles from './styles';
 
-const steps = ['Shipping address', 'Payment details', 'Review your order'];
+const steps = ['Billing Address', 'Payment Details', 'Review Order'];
 const { formId, formField } = checkoutFormModel;
 
 function _renderStepContent(step) {
@@ -47,8 +47,10 @@ export default function CheckoutPage() {
   }
 
   async function _submitForm(values, actions) {
+    //JWP ANYWHERE YOU SEE _sleep function-- it's a placeholder for an API call, so that's where we need to customize/replace
     await _sleep(1000);
-    alert(JSON.stringify(values, null, 2));
+    //TODO: JWP here's where I need to send to the database
+      alert(JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
 
     setActiveStep(activeStep + 1);
@@ -107,7 +109,7 @@ export default function CheckoutPage() {
                       color="primary"
                       className={classes.button}
                     >
-                      {isLastStep ? 'Place order' : 'Next'}
+                      {isLastStep ? 'Place order' : 'Continue'}
                     </Button>
                     {isSubmitting && (
                       <CircularProgress

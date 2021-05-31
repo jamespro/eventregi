@@ -11,11 +11,12 @@ const {
     country,
     nameOnCard,
     cardNumber,
-    expiryDate,
+    expirationDate,
     cvv
   }
 } = checkoutFormModel;
 
+//TODO: JWP we probably need regex that validates all credit cards, not just Visa
 const visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
 
 export default [
@@ -42,10 +43,10 @@ export default [
     [cardNumber.name]: Yup.string()
       .required(`${cardNumber.requiredErrorMsg}`)
       .matches(visaRegEx, cardNumber.invalidErrorMsg),
-    [expiryDate.name]: Yup.string()
+    [expirationDate.name]: Yup.string()
       .nullable()
-      .required(`${expiryDate.requiredErrorMsg}`)
-      .test('expDate', expiryDate.invalidErrorMsg, val => {
+      .required(`${expirationDate.requiredErrorMsg}`)
+      .test('expDate', expirationDate.invalidErrorMsg, val => {
         if (val) {
           const startDate = new Date();
           const endDate = new Date(2050, 12, 31);
