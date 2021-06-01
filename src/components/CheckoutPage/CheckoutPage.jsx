@@ -89,7 +89,7 @@ export default function CheckoutPage() {
   return (
     <React.Fragment>
       <Typography component="h1" variant="h4" align="center">
-        Checkout
+        Registration
       </Typography>
       <Stepper activeStep={activeStep} className={classes.stepper}>
         {steps.map(label => (
