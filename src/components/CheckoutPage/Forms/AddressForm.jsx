@@ -1,44 +1,45 @@
 import React from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import { InputField, CheckboxField, SelectField } from '../../FormFields';
+const countries = require('./countries.json');
+const states = require('./states.json');
+// const states = [
+//   {
+//     value: undefined,
+//     label: 'None'
+//   },
+//   {
+//     value: '11',
+//     label: 'Florida'
+//   },
+//   {
+//     value: '22',
+//     label: 'Michigan'
+//   },
+//   {
+//     value: '33',
+//     label: 'Texas'
+//   }
+// ];
 
-const states = [
-  {
-    value: undefined,
-    label: 'None'
-  },
-  {
-    value: '11',
-    label: 'Florida'
-  },
-  {
-    value: '22',
-    label: 'Michigan'
-  },
-  {
-    value: '33',
-    label: 'Texas'
-  }
-];
-
-const countries = [
-  {
-    value: null,
-    label: 'None'
-  },
-  {
-    value: '111',
-    label: 'United States'
-  },
-  {
-    value: '222',
-    label: 'Italy'
-  },
-  {
-    value: '333',
-    label: 'Vietnam'
-  }
-];
+// const countries = [
+//   {
+//     value: null,
+//     label: 'None'
+//   },
+//   {
+//     value: '111',
+//     label: 'United States'
+//   },
+//   {
+//     value: '222',
+//     label: 'Italy'
+//   },
+//   {
+//     value: '333',
+//     label: 'Vietnam'
+//   }
+// ];
 
 export default function AddressForm(props) {
   const {
