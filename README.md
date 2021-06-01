@@ -9,6 +9,7 @@ Event registration
 - [x] Reginfo: Pull Countries from a data source 
 - [x] Make API url configurable to use remote when on hosting and local api when localhost
 - [x] Confirm: Link to return to start
+- [ ] ADD SIZZLE
 - [ ] FILL IN README
 - [ ] Add header banner
 - [ ] DESIGN: LANDING PAGE (Add a step with just image and arrow?)
