@@ -1,11 +1,11 @@
 # EventReg - React
 ## Description
 
-Initial scope is to register an attendee for an event.
-
-This repo uses an API I am developing in another repo for data management. Link to my API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
+Initial scope is to register an attendee for an event. Currently multi-step checkout process using Formik and Material UI, using MongoDB.
 
 Link to live demo: [EventRegi Demo](https://eventregi.herokuapp.com/)
+
+This repo uses an API I am developing in another repo for data management. Link to my API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
 
 ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/banner.png)
 
@@ -19,7 +19,8 @@ MERN stack:
 * Node.js
 
 Also: 
-* Material UI
+* Material UI - helps with layout and multi-step
+* Formik - easier form management
 
 ## Roadmap
 
