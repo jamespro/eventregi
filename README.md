@@ -1,6 +1,42 @@
-# eventregi
+# EventReg - React
+## Description
 
-Event registration
+Initial scope is to register an attendee for an event.
+
+This repo uses an API I am developing in another repo for data management.
+
+Link to live demo: [EventRegi Demo](https://eventregi.herokuapp.com/)
+
+![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/banner.png)
+
+Link to API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
+
+## Tech used
+* JavaScript
+MERN stack:
+* MongoDB / Mongoose
+* Express
+* React
+* Node.js
+
+## Roadmap
+
+Future features may include:
+* Multi-page registration
+  * Demos
+  * Conditional Demos
+  * Items
+  * Sessions
+  * Visa
+  * Invite a friend
+  * Payment
+* Registrant admin: Update record
+* Upgrade / Add items
+* Exhibitor booth staff registration
+* Event admin
+  * Create, View, Edit, Delete
+* Reporting with graphic packages
+
 ## TODO
 - [x] Change TITLE, metadata, favicon
 - [x] Hook up to database
@@ -21,7 +57,7 @@ Event registration
 - [ ] Confirm step: return an ordernumber, order details after submit successfully
 - [ ] Payment: Why did layout change? seems odd. it changed when I added Country/ State dropdowns
 
-## Roadmap / Improvements
+## Improvements / Optimizations
 - [ ] Nav: put text below step, to save space?
 - [ ] Layout: wider, taller? Test on mobile
 - [ ] Payment: Accept/validate other types of credit cards
