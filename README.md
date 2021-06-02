@@ -3,13 +3,11 @@
 
 Initial scope is to register an attendee for an event.
 
-This repo uses an API I am developing in another repo for data management.
+This repo uses an API I am developing in another repo for data management. Link to my API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
 
 Link to live demo: [EventRegi Demo](https://eventregi.herokuapp.com/)
 
 ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/banner.png)
-
-Link to API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
 
 ## Tech used
 * JavaScript
