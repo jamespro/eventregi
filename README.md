@@ -13,11 +13,15 @@ Link to API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
 
 ## Tech used
 * JavaScript
+
 MERN stack:
 * MongoDB / Mongoose
 * Express
 * React
 * Node.js
+
+Also: 
+* Material UI
 
 ## Roadmap
 
