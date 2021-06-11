@@ -37,6 +37,7 @@ Future features may include:
 * Upgrade / Add items
 * Exhibitor booth staff registration
 * Event admin
+  * Use "react-admin" as admin code?
   * Create, View, Edit, Delete
 * Reporting with graphic packages
 
