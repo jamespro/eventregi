@@ -49,7 +49,8 @@ Future features may include:
 - [x] Reginfo: Pull Countries from a data source 
 - [x] Make API url configurable to use remote when on hosting and local api when localhost
 - [x] Confirm: Link to return to start
-- [ ] UUID library - node: Check out this package, put UUID into route so you can track progress, return to step
+- [x] UUID library - node: Check out this package and add 
+- [ ] put UUID into route so you can track progress, return to step
 - [ ] ADD SIZZLE
 - [ ] FILL IN README
 - [ ] Add header banner
