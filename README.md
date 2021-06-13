@@ -50,6 +50,11 @@ Future features may include:
 - [x] Make API url configurable to use remote when on hosting and local api when localhost
 - [x] Confirm: Link to return to start
 - [x] UUID library - node: Check out this package and add 
+- [x] Move checkout code to its own repo
+- [ ] Set up routes on default screen so that checkout is moved to separate route
+- [ ] Route: / make it a landing page with link to AT reginfo
+- [ ] Route: /attendee/reginfo/showcode = reginfo
+- [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
 - [ ] put UUID into route so you can track progress, return to step
 - [ ] ADD SIZZLE
 - [ ] FILL IN README
