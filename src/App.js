@@ -5,6 +5,7 @@ import MainHeader from './components/MainHeader';
 import MaterialLayout from './components/layout/MaterialLayout';
 import CheckoutPage from './components/CheckoutPage';
 import Layout from './components/layout/Layout';
+import Reginfo from './pages/Reginfo';
 
 function App() {
   return (
@@ -14,8 +15,9 @@ function App() {
               <Layout>
          <Switch>
         <Route path="/" exact>
-                      <div>
+            <div>
             <p>Welcome to Mystery Convention 2021!</p>
+            <p><Link to="/attendee/reginfo/myst1221">Begin Attendee Registration</Link></p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
@@ -24,8 +26,7 @@ function App() {
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <p>&nbsp;</p>
-            <p>&nbsp;</p>
-                      </div>
+            </div>
             {/* <Link to='/checkout'>Link to checkout</Link> */}
           </Route>
           {/* <Route path="/checkout">
@@ -35,7 +36,8 @@ function App() {
                 </MaterialLayout>
             </div>
           </Route> */}
-          <Route path="/attendee/reginfo/myst1222">
+            <Route path="/attendee/reginfo/:showcode">
+               <Reginfo />
           </Route>
 
         </Switch>
