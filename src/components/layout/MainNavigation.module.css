@@ -1,0 +1,40 @@
+.section {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  padding: 0 0 0 1%;
+  /* justify-content: space-between; */
+  align-items: center;
+  background-color: #044599;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: white;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  margin-left: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a.active {
+  color: #95bcf0;
+  padding-bottom: 0.25rem;
+  border-bottom: 4px solid #95bcf0;
+}

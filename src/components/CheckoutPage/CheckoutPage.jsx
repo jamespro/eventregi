@@ -23,7 +23,7 @@ import useStyles from './styles';
 //TODO: I would like to put this in a common location
 const protocol = window.location.protocol;
 let host = window.location.host;
-if (window.location.hostname == 'localhost') {
+if (window.location.hostname === 'localhost') {
     host = 'localhost:3333';
 } else {
     host = 'eventregg.herokuapp.com';
@@ -52,9 +52,9 @@ export default function CheckoutPage() {
   const currentValidationSchema = validationSchema[activeStep];
   const isLastStep = activeStep === steps.length - 1;
 
-  function _sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
+//   function _sleep(ms) {
+//     return new Promise(resolve => setTimeout(resolve, ms));
+//   }
 
   async function _submitForm(values, actions) {
     const requestOptions = {
