@@ -1,12 +1,10 @@
 import { Fragment, useRef, useState } from 'react';
-import { Prompt } from 'react-router-dom';
+import { useFormik } from "formik";
 
 import Card from '../UI/Card';
-import LoadingSpinner from '../UI/LoadingSpinner';
 import classes from './ReginfoForm.module.css';
 
 const ReginfoForm = (props) => {
-  const [isEntering, setIsEntering] = useState(false);
 
   const authorInputRef = useRef();
   const textInputRef = useRef();
@@ -22,46 +20,27 @@ const ReginfoForm = (props) => {
     props.onAddQuote({ author: enteredAuthor, text: enteredText });
   }
 
-  const finishEnteringHandler = () => {
-    setIsEntering(false);
-  };
-
-  const formFocusedHandler = () => {
-    setIsEntering(true);
-  };
+    const formik = useFormik({
+    initialValues: { email: "" },
+    onSubmit: values => {
+      alert(JSON.stringify(values, null, 2));
+    }
+  });
 
   return (
     <Fragment>
-      <Prompt
-        when={isEntering}
-        message={(location) =>
-          'Are you sure you want to leave? All your entered data will be lost!'
-        }
-      />
       <Card>
-        <form
-          onFocus={formFocusedHandler}
-          className={classes.form}
-          onSubmit={submitFormHandler}
-        >
-          {props.isLoading && (
-            <div className={classes.loading}>
-              <LoadingSpinner />
-            </div>
-          )}
-
-          <div className={classes.control}>
-            <label htmlFor='author'>Author</label>
-            <input type='text' id='author' ref={authorInputRef} />
-          </div>
-          <div className={classes.control}>
-            <label htmlFor='text'>Text</label>
-            <textarea id='text' rows='5' ref={textInputRef}></textarea>
-          </div>
-          <div className={classes.actions}>
-            <button onClick={finishEnteringHandler} className='btn'>Add Quote</button>
-          </div>
-        </form>
+    <form onSubmit={formik.handleSubmit}>
+      <label htmlFor="email">Email Address</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        onChange={formik.handleChange}
+        value={formik.values.email}
+      />
+      <button type="submit">Submit</button>
+    </form>
       </Card>
     </Fragment>
   );
