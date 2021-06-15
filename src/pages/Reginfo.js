@@ -227,7 +227,7 @@ const Reginfo = () => {
                 I accept the terms and conditions
             </MyCheckbox>
 
-            <button type="submit">Submit</button>
+            <button type="submit">Continue</button>
             </Form>
         </Formik>
         </>

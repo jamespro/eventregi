@@ -13,6 +13,7 @@ function App() {
       <div className="App">
         <MainHeader />
         <Layout>
+      <MaterialLayout>
         <Switch>
         <Route path="/" exact>
             <div>
@@ -41,6 +42,7 @@ function App() {
           </Route>
 
         </Switch>
+      </MaterialLayout>
         </Layout>
       </div>
     </Router>

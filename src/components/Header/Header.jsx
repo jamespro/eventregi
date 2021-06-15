@@ -6,16 +6,19 @@ import useStyles from './styles';
 
 export default function Header() {
   const classes = useStyles();
-
-  return (
-    <AppBar position="absolute" color="default" className={classes.appBar}>
-      <Toolbar>
-        <Typography variant="h6" color="inherit" noWrap>
-            <Link color="inherit" href="/">
-                Mystery Convention 2021 - Attendee Registration 
-            </Link>
-        </Typography>
-      </Toolbar>
-    </AppBar>
-  );
+    return (
+        <>
+        </>
+    );
+//   return (
+//     <AppBar position="absolute" color="default" className={classes.appBar}>
+//       <Toolbar>
+//         <Typography variant="h6" color="inherit" noWrap>
+//             <Link color="inherit" href="/">
+//                 Mystery Convention 2021 - Attendee Registration 
+//             </Link>
+//         </Typography>
+//       </Toolbar>
+//     </AppBar>
+//   );
 }

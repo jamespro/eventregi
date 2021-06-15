@@ -54,9 +54,14 @@ Future features may include:
 - [x] Set up routes on default screen so that checkout is moved to separate route
 - [x] Route: / make it a landing page with link to AT reginfo
 - [x] Route: /attendee/reginfo/showcode = reginfo
+- [ ] Header: Add graphic banner
+- [ ] Header & Nav: Replace Nav with MaterialUI Stepper?
+- [x] Header: Remove AppBar
+- [ ] Layout: MUI: Make fields area "bigger"? Remove border? (maybe postpone this)
 - [x] Reginfo: send just user fields
 - [ ] Reginfo: add more user fields
-- [ ] Reginfo: add field for regStatus - temp, active, or inactive
+- [x] Reginfo: add field for regStatus - temp, active, or inactive
+- [ ] Payment: when submit, change regStatus to active
 - [ ] Showcode: Have pages show something specific based on showcode
 - [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
 - [ ] put UUID into route so you can track progress, return to step
