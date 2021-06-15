@@ -6,7 +6,7 @@ import {
 } from '@material-ui/core';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
-import { InputField, CheckboxField, SelectField } from '../components/FormFields';
+import { InputField, CheckboxField, SelectField, HiddenField } from '../components/FormFields';
 const countries = require('../components/Forms/countries.json');
 const states = require('../components/Forms/states.json');
 const jobTypes = require('../components/Forms/jobtypes.json');
@@ -40,22 +40,6 @@ function _handleSubmit(values, actions) {
     _submitForm(values, actions);
 }
 
-const MyTextInput = ({ label, ...props }) => {
-// useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
-// which we can spread on <input>. We can use field meta to show an error
-// message if the field is invalid and it has been touched (i.e. visited)
-    const [field, meta] = useField(props);
-    return (
-        <>
-        <label htmlFor={props.id || props.name}>{label}</label>
-        <input className="text-input" {...field} {...props} />
-        {meta.touched && meta.error ? (
-            <div className="error">{meta.error}</div>
-        ) : null}
-        </>
-    );
-};
-
 const MyHiddenInput = ({ label, ...props }) => {
     const [field, meta] = useField(props);
     return (
@@ -65,39 +49,6 @@ const MyHiddenInput = ({ label, ...props }) => {
     );
 };
 
-const MyCheckbox = ({ children, ...props }) => {
-// React treats radios and checkbox inputs differently other input types, select, and textarea.
-// Formik does this too! When you specify `type` to useField(), it will
-// return the correct bag of props for you -- a `checked` prop will be included
-// in `field` alongside `name`, `value`, `onChange`, and `onBlur`
-const [field, meta] = useField({ ...props, type: 'checkbox' });
-return (
-    <div>
-    <label className="checkbox-input">
-        <input type="checkbox" {...field} {...props} />
-        {children}
-    </label>
-    {meta.touched && meta.error ? (
-        <div className="error">{meta.error}</div>
-    ) : null}
-    </div>
-);
-};
-
-const MySelect = ({ label, ...props }) => {
-    const [field, meta] = useField(props);
-    return (
-        <div>
-        <label htmlFor={props.id || props.name}>{label}</label>
-        <select {...field} {...props} />
-        {meta.touched && meta.error ? (
-            <div className="error">{meta.error}</div>
-        ) : null}
-        </div>
-    );
-};
-
-// And now we can use these
 const Reginfo = () => {
     return (
         <>
@@ -166,12 +117,7 @@ const Reginfo = () => {
             // }}
         >
             <Form>
-            <MyHiddenInput
-                label="showcode"
-                name="showcode"
-                type="hidden"
-                value="myst1021"
-            />
+          <HiddenField name="showcode" placeholder="myst1021" fullWidth />
           <InputField name="firstName" label="First Name" placeholder="Jane" fullWidth />
           <InputField name="lastName" label="Last Name" placeholder="Doe" fullWidth />
           <InputField name="address1" label="Address 1" placeholder="address1" fullWidth />
