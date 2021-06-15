@@ -19,6 +19,8 @@ const {
 //TODO: JWP we probably need regex that validates all credit cards, not just Visa
 const visaRegEx = /^(?:4[0-9]{12}(?:[0-9]{3})?)$/;
 
+// eslint gave this error here: Assign array to a variable before exporting as module default  import/no-anonymous-default-export
+// eslint-disable-next-line
 export default [
   Yup.object().shape({
     [firstName.name]: Yup.string().required(`${firstName.requiredErrorMsg}`),

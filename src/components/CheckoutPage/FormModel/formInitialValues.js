@@ -15,6 +15,8 @@ const {
   }
 } = checkoutFormModel;
 
+// eslint gave this error here: Assign array to a variable before exporting as module default  import/no-anonymous-default-export
+// eslint-disable-next-line
 export default {
   [firstName.name]: '',
   [lastName.name]: '',

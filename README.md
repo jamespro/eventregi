@@ -51,9 +51,13 @@ Future features may include:
 - [x] Confirm: Link to return to start
 - [x] UUID library - node: Check out this package and add 
 - [x] Move checkout code to its own repo
-- [ ] Set up routes on default screen so that checkout is moved to separate route
-- [ ] Route: / make it a landing page with link to AT reginfo
-- [ ] Route: /attendee/reginfo/showcode = reginfo
+- [x] Set up routes on default screen so that checkout is moved to separate route
+- [x] Route: / make it a landing page with link to AT reginfo
+- [x] Route: /attendee/reginfo/showcode = reginfo
+- [x] Reginfo: send just user fields
+- [ ] Reginfo: add more user fields
+- [ ] Reginfo: add field for regStatus - temp, active, or inactive
+- [ ] Showcode: Have pages show something specific based on showcode
 - [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
 - [ ] put UUID into route so you can track progress, return to step
 - [ ] ADD SIZZLE
