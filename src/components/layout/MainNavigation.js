@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import classes from './MainNavigation.module.css';
 
 const MainNavigation = () => {
-  return (
+    return (
     <section className={classes.section}>
       <div className={classes.logo}>Registration</div>
       <nav className={classes.nav}>
