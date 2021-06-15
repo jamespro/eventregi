@@ -1,7 +1,37 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  Button,
+  CircularProgress
+} from '@material-ui/core';
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
+import { InputField, CheckboxField, SelectField } from '../components/FormFields';
+const countries = require('../components/Forms/countries.json');
+const states = require('../components/Forms/states.json');
+
+const jobTypes = [
+  {
+    value: null,
+    label: 'None'
+  },
+  {
+    value: 'designer',
+    label: 'Designer'
+  },
+  {
+    value: 'development',
+    label: 'Developer'
+  },
+  {
+    value: 'product',
+    label: 'Product Manager'
+  },
+  {
+    value: 'other',
+    label: 'Other'
+  }
+];
 
 //TODO: I would like to put this in a common location
 const protocol = window.location.protocol;
@@ -164,87 +194,51 @@ const Reginfo = () => {
                 type="hidden"
                 value="myst1021"
             />
+          <InputField name="firstName" label="First Name" placeholder="Jane" fullWidth />
+          <InputField name="lastName" label="Last Name" placeholder="Doe" fullWidth />
+          <InputField name="address1" label="Address 1" placeholder="address1" fullWidth />
+          <InputField name="address2" label="Address 2" placeholder="address2" fullWidth />
+          <InputField name="city" label="City" placeholder="City" fullWidth />
+          <SelectField
+            name="state"
+            label="State"
+            data={states}
+            fullWidth
+          />
+          <InputField name="zipcode" label="Zip Code" placeholder="Zip Code" fullWidth />
+          <SelectField
+            name="country"
+            label="Country"
+            data={countries}
+            fullWidth
+          />
+           <InputField name="email" label="Email Address" placeholder="jane@test.com" fullWidth />
 
-            <MyTextInput
-                label="First Name"
-                name="firstName"
-                type="text"
-                placeholder="Jane"
+          <SelectField
+            name="jobType"
+            label="Job Type"
+            data={jobTypes}
+            fullWidth
+            />
+          <CheckboxField
+            name="useAddressForPaymentDetails"
+            label="Use address for payment details"
+            fullWidth
+            />
+          <CheckboxField
+            name="acceptedTerms"
+            label="I accept the terms and conditions"
+            fullWidth
             />
 
-            <MyTextInput
-                label="Last Name"
-                name="lastName"
-                type="text"
-                placeholder="Doe"
-            />
-
-            <MyTextInput
-                label="Address1"
-                name="address1"
-                type="text"
-                placeholder="address1"
-            />
-
-            <MyTextInput
-                label="Address2"
-                name="address2"
-                type="text"
-                placeholder="address2"
-            />
-
-            <MyTextInput
-                label="city"
-                name="city"
-                type="text"
-                placeholder="city"
-            />
-
-            <MyTextInput
-                label="state"
-                name="state"
-                type="text"
-                placeholder="state"
-            />
-
-            <MyTextInput
-                label="zipcode"
-                name="zipcode"
-                type="text"
-                placeholder="zipcode"
-            />
-
-            <MyTextInput
-                label="country"
-                name="country"
-                type="text"
-                placeholder="country"
-            />
-
-            <MyCheckbox name="useAddressForPaymentDetails">
-                Use address for payment details
-            </MyCheckbox>
-
-            <MyTextInput
-                label="Email Address"
-                name="email"
-                type="email"
-                placeholder="jane@formik.com"
-            />
-
-            <MySelect label="Job Type" name="jobType">
-                <option value="">Select a job type</option>
-                <option value="designer">Designer</option>
-                <option value="development">Developer</option>
-                <option value="product">Product Manager</option>
-                <option value="other">Other</option>
-            </MySelect>
-
-            <MyCheckbox name="acceptedTerms">
-                I accept the terms and conditions
-            </MyCheckbox>
-
-            <button type="submit">Continue</button>
+                    <Button
+                      type="submit"
+                      variant="contained"
+                      color="primary"
+                      className=""
+                    >
+                      Continue
+                    </Button>
             </Form>
         </Formik>
         </>

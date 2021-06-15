@@ -47,13 +47,14 @@ Future features may include:
 - [ ] FILL IN README
 - [ ] Header: Add graphic banner
 - [ ] v2? DB connect code, move to separate file and include
-- [ ] FORMS/Formik: put MaterialUI onto form components incl. buttons
+- [ ] **FORMS/Formik: put MaterialUI onto form components incl. buttons**
+- [ ] Reginfo: Make email field into email type input?
+- [ ] Reginfo: Make State and Country use select inputs
 - [ ] FORMS/Formik: Use form components from separate files
 - [ ] FORMS/Formik: initial values, what to do for this? e.g. uuid
-- [ ] put UUID into route so you can track progress, return to step
+- [ ] v2 put UUID into route so you can track progress, return to step
 - [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
-- [ ] Reginfo: put showcode into user record so we know what event they are registering for
-- [ ] Reginfo: when checking email address, also check against same showcode
+- [ ] v2 Reginfo: Get showcode from URL, to insert into default hidden field (and other uses)
 - [ ] Reginfo: Feedback after submit... that you were successful
 - [ ] Reginfo: Feedback after submit...duplicate email
 - [ ] Reginfo: Success, redirect to Items
@@ -91,6 +92,8 @@ Future features may include:
 - [x] Header: Remove AppBar
 - [x] Reginfo: send just user fields
 - [x] Reginfo: add field for regStatus - temp, active, or inactive
+- [x] Reginfo: put showcode into user record so we know what event they are registering for
+- [x] Reginfo: when checking email address, also check against same showcode
 ## Improvements / Optimizations
 - [ ] Nav: put text below step, to save space?
 - [ ] Layout: wider, taller? Test on mobile
