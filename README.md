@@ -41,7 +41,41 @@ Future features may include:
   * Create, View, Edit, Delete
 * Reporting with graphic packages
 
-## TODO
+## TODO - MVP v1
+- [ ] ADD SIZZLE
+- [ ] DESIGN: LANDING PAGE (Add a step with just image and arrow?)
+- [ ] FILL IN README
+- [ ] Header: Add graphic banner
+- [ ] v2? DB connect code, move to separate file and include
+- [ ] FORMS/Formik: put MaterialUI onto form components incl. buttons
+- [ ] FORMS/Formik: Use form components from separate files
+- [ ] FORMS/Formik: initial values, what to do for this? e.g. uuid
+- [ ] put UUID into route so you can track progress, return to step
+- [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
+- [ ] Reginfo: put showcode into user record so we know what event they are registering for
+- [ ] Reginfo: when checking email address, also check against same showcode
+- [ ] Reginfo: Feedback after submit... that you were successful
+- [ ] Reginfo: Feedback after submit...duplicate email
+- [ ] Reginfo: Success, redirect to Items
+- [ ] v2 Reginfo: if duplicate email, highlight field and make you change it
+- [ ] v2 Reginfo: AJAX check for duplicate email in db (AND ACTIVE)
+- [ ] v2 DEMOS ARE V2
+- [ ] ITEMS: Add step where you choose 1 of three items
+- [ ] Review: Show items you chose
+- [ ] Payment: Save Order Total with order
+- [ ] Payment: Show you order total
+- [ ] Payment: when submit, change regStatus to active
+- [ ] Payment: Why did layout change? seems odd. it changed when I added Country/ State dropdowns
+- [ ] Confirm step: return an ordernumber, order details after submit successfully
+
+## TODO - MVP v2
+- [ ] Showcode: Have pages show something specific based on showcode
+- [ ] Header & Nav: Replace Nav with MaterialUI Stepper?
+- [ ] Layout: MUI: Make fields area "bigger"? Remove border? (maybe postpone this)
+- [ ] Reginfo: add more user fields
+- [ ] Reginfo: Remove "use address for payment details"?
+
+## DONE
 - [x] Change TITLE, metadata, favicon
 - [x] Hook up to database
 - [x] Database: Save submitted information to MongoDB
@@ -54,29 +88,9 @@ Future features may include:
 - [x] Set up routes on default screen so that checkout is moved to separate route
 - [x] Route: / make it a landing page with link to AT reginfo
 - [x] Route: /attendee/reginfo/showcode = reginfo
-- [ ] Header: Add graphic banner
-- [ ] Header & Nav: Replace Nav with MaterialUI Stepper?
 - [x] Header: Remove AppBar
-- [ ] Layout: MUI: Make fields area "bigger"? Remove border? (maybe postpone this)
 - [x] Reginfo: send just user fields
-- [ ] Reginfo: add more user fields
 - [x] Reginfo: add field for regStatus - temp, active, or inactive
-- [ ] Payment: when submit, change regStatus to active
-- [ ] Showcode: Have pages show something specific based on showcode
-- [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
-- [ ] put UUID into route so you can track progress, return to step
-- [ ] ADD SIZZLE
-- [ ] FILL IN README
-- [ ] Add header banner
-- [ ] DESIGN: LANDING PAGE (Add a step with just image and arrow?)
-- [ ] Reginfo: Remove "use address for payment details"?
-- [ ] ITEMS: Add step where you choose 1 of three items
-- [ ] Payment: Show you order total
-- [ ] Review: Show items you chose
-- [ ] Payment: Save Order Total with order
-- [ ] Confirm step: return an ordernumber, order details after submit successfully
-- [ ] Payment: Why did layout change? seems odd. it changed when I added Country/ State dropdowns
-
 ## Improvements / Optimizations
 - [ ] Nav: put text below step, to save space?
 - [ ] Layout: wider, taller? Test on mobile
