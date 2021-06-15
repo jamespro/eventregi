@@ -9,29 +9,7 @@ import * as Yup from 'yup';
 import { InputField, CheckboxField, SelectField } from '../components/FormFields';
 const countries = require('../components/Forms/countries.json');
 const states = require('../components/Forms/states.json');
-
-const jobTypes = [
-  {
-    value: null,
-    label: 'None'
-  },
-  {
-    value: 'designer',
-    label: 'Designer'
-  },
-  {
-    value: 'development',
-    label: 'Developer'
-  },
-  {
-    value: 'product',
-    label: 'Product Manager'
-  },
-  {
-    value: 'other',
-    label: 'Other'
-  }
-];
+const jobTypes = require('../components/Forms/jobtypes.json');
 
 //TODO: I would like to put this in a common location
 const protocol = window.location.protocol;
