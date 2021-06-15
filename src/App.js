@@ -2,18 +2,18 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
 import MainHeader from './components/MainHeader';
-import MaterialLayout from './components/layout/MaterialLayout';
+import MaterialLayout from './components/Layout/MaterialLayout';
 import CheckoutPage from './components/CheckoutPage';
-import Layout from './components/layout/Layout';
+import Layout from './components/Layout/Layout';
 import Reginfo from './pages/Reginfo';
 
 function App() {
   return (
     <Router>
       <div className="App">
-              <MainHeader />
-              <Layout>
-         <Switch>
+        <MainHeader />
+        <Layout>
+        <Switch>
         <Route path="/" exact>
             <div>
             <p>Welcome to Mystery Convention 2021!</p>
