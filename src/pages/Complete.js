@@ -20,7 +20,7 @@ async function _submitForm(values, actions) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values)
     }
-    const response = await fetch(API_SERVER+'/api/register', requestOptions);
+    const response = await fetch(API_SERVER+'/api/complete', requestOptions);
     const data = await response.json();
     console.log(data);
     //TODO: Do something after you get a successful response
@@ -87,7 +87,6 @@ const Reginfo = () => {
         <h1>Contact Info</h1>
         <Formik
             initialValues={{
-                email: '',
                 firstName: '',
                 lastName: '',
                 address1: '',
@@ -97,6 +96,11 @@ const Reginfo = () => {
                 zipcode: '',
                 country: '',
                 useAddressForPaymentDetails: '',
+                nameOnCard: '',
+                cardNumber: '',
+                expirationDate: '',
+                cvv: '',
+                email: '',
                 acceptedTerms: false, // added for our checkbox
                 jobType: '', // added for our select
             }}
@@ -202,6 +206,34 @@ const Reginfo = () => {
                 name="country"
                 type="text"
                 placeholder="country"
+            />
+
+            <MyTextInput
+                label="nameOnCard"
+                name="nameOnCard"
+                type="text"
+                placeholder="nameOnCard"
+            />
+
+            <MyTextInput
+                label="cardNumber"
+                name="cardNumber"
+                type="text"
+                placeholder="cardNumber"
+            />
+
+            <MyTextInput
+                label="expirationDate"
+                name="expirationDate"
+                type="text"
+                placeholder="expirationDate"
+            />
+
+            <MyTextInput
+                label="cvv"
+                name="cvv"
+                type="text"
+                placeholder="cvv"
             />
 
             <MyCheckbox name="useAddressForPaymentDetails">
