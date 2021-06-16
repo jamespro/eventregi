@@ -1,0 +1,111 @@
+.pencil {
+  width: 100%;
+  padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #13aa52;
+}
+.pencil p {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+.hero {
+  color: white;
+}
+.bgvid {
+  object-fit: cover;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.headertext {
+  position: fixed;
+  top: 20vh;
+  left: 0;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.headertext h2 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3vw;
+  line-height: 1.2;
+  font-size: 3vw;
+  text-align: center;
+}
+.headertext h2 span {
+  display: block;
+  font-size: 10vw;
+  letter-spacing: -0.3vw;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+:root {
+  --yellow-primary: #fedc49;
+  --yellow-hover: #ffeb99;
+  --yellow-active: #fef2c8;
+}
+.button2021:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--yellow-primary);
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  z-index: -1;
+  transition: opacity 0.1s, left 0.2s, bottom 0.2s;
+}
+.button2021:hover:before,
+.button2021:focus:before,
+.button2021:active:before {
+  opacity: 0;
+  left: 0;
+  bottom: 0;
+  transition: opacity 0.1s, left 0.2s, bottom 0.2s;
+}
+.button2021:after,
+.button2021-no-border:after,
+.button2021--link:after {
+  content: ">>";
+  color: #273742;
+  margin-left: 8px;
+}
+.button2021 {
+  display: inline-block;
+  background-color: var(--yellow-primary);
+  padding: 16px 20px;
+  position: relative;
+  color: #273742;
+  margin-left: 8px;
+  margin-bottom: 8px;
+  left: 0;
+  top: 0;
+  font-size: 18px;
+  line-height: 18px;
+  opacity: 1;
+  transition: all 0.3s;
+  font-weight: 700;
+}
+.button2021:hover {
+  background-color: var(--yellow-hover);
+}
+.button2021:hover,
+.button2021:focus,
+.button2021:active {
+  left: -8px;
+  top: 8px;
+  transition: top 0.2s, left 0.2s;
+}

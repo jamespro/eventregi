@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-d
 import { Link } from "react-router-dom";
 import MainHeader from './components/MainHeader';
 import MaterialLayout from './components/Layout/MaterialLayout';
+import Footer from './components/Footer';
 import CheckoutPage from './components/CheckoutPage';
 import Layout from './components/Layout/Layout';
+import Landing from './pages/Landing';
 import Reginfo from './pages/Reginfo';
 
 function App() {
@@ -12,23 +14,17 @@ function App() {
     <Router>
       <div className="App">
         <MainHeader />
-        <Layout>
-      <MaterialLayout>
         <Switch>
-        <Route path="/" exact>
-            <div>
-            <p>Welcome to Mystery Convention 2021!</p>
-            <p><Link to="/attendee/reginfo/myst1221">Begin Attendee Registration</Link></p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            </div>
-            {/* <Link to='/checkout'>Link to checkout</Link> */}
+          <Route path="/" exact>
+            <Landing />
+              <Footer />
+          </Route>
+          <Route path="/attendee/reginfo/:showcode">
+            <Layout>
+                <MaterialLayout>
+                    <Reginfo />
+                </MaterialLayout>
+            </Layout>
           </Route>
           {/* <Route path="/checkout">
             <div>
@@ -37,13 +33,7 @@ function App() {
                 </MaterialLayout>
             </div>
           </Route> */}
-            <Route path="/attendee/reginfo/:showcode">
-               <Reginfo />
-          </Route>
-
         </Switch>
-      </MaterialLayout>
-        </Layout>
       </div>
     </Router>
   );

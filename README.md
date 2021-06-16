@@ -42,8 +42,6 @@ Future features may include:
 * Reporting with graphic packages
 
 ## TODO - MVP v1
-- [ ] ADD SIZZLE
-- [ ] DESIGN: LANDING PAGE (Add a step with just image and arrow?)
 - [ ] FILL IN README
 - [ ] Header: Add graphic banner
 - [ ] v2? DB connect code, move to separate file and include
@@ -76,6 +74,8 @@ Future features may include:
 - [ ] Reginfo: Remove "use address for payment details"?
 
 ## DONE
+- [x] ADD SIZZLE
+- [x] DESIGN: LANDING PAGE (Add a step with just image and arrow?) (https://www.mongodb.com/live)
 - [x] Change TITLE, metadata, favicon
 - [x] Hook up to database
 - [x] Database: Save submitted information to MongoDB
