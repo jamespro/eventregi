@@ -7,47 +7,15 @@ import {
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
 import { InputField, CheckboxField, SelectField, HiddenField } from '../components/FormFields';
+import { register } from '../lib/api';
+
 const countries = require('../components/Forms/countries.json');
 const states = require('../components/Forms/states.json');
 const jobTypes = require('../components/Forms/jobtypes.json');
 
-//TODO: I would like to put this in a common location
-const protocol = window.location.protocol;
-let host = window.location.host;
-if (window.location.hostname == 'localhost') {
-    host = 'localhost:3333';
-} else {
-    host = 'eventregg.herokuapp.com';
-}
-
-let API_SERVER = protocol + '//' + host;
-
-async function _submitForm(values, actions) {
-    const requestOptions = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(values)
-    }
-    const response = await fetch(API_SERVER+'/api/register', requestOptions);
-    const data = await response.json();
-    console.log(data);
-    //TODO: Do something after you get a successful response
-    //TODO: display success message, or dialog, or have another page load with instructions, or a configurable redirect URL
-    actions.setSubmitting(false);
-}
-
 function _handleSubmit(values, actions) {
-    _submitForm(values, actions);
+    register(values, actions);
 }
-
-const MyHiddenInput = ({ label, ...props }) => {
-    const [field, meta] = useField(props);
-    return (
-        <>
-        <input className="hidden-input" {...field} {...props} />
-        </>
-    );
-};
 
 const Reginfo = () => {
     return (
@@ -105,16 +73,6 @@ const Reginfo = () => {
                     .required('Required'),
             })}
             onSubmit={_handleSubmit}
-    //   onSubmit={async (values) => {
-    //     await sleep(500);
-    //     alert(JSON.stringify(values, null, 2));
-    //   }}
-            // onSubmit={(values, { setSubmitting }) => {
-            //     setTimeout(() => {
-            //         alert(JSON.stringify(values, null, 2));
-            //         setSubmitting(false);
-            //     }, 400);
-            // }}
         >
             <Form>
           <HiddenField name="showcode" placeholder="myst1021" fullWidth />
