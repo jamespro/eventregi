@@ -8,6 +8,7 @@ import CheckoutPage from './components/CheckoutPage';
 import Layout from './components/Layout/Layout';
 import Landing from './pages/Landing';
 import Reginfo from './pages/Reginfo';
+import Items from './pages/Items';
 
 function App() {
   return (
@@ -23,6 +24,13 @@ function App() {
             <Layout>
                 <MaterialLayout>
                     <Reginfo />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+          <Route path="/attendee/items/:uuid">
+            <Layout>
+                <MaterialLayout>
+                    <Items />
                 </MaterialLayout>
             </Layout>
           </Route>
