@@ -1,13 +1,13 @@
 import { Fragment, useRef, useState } from 'react';
-import { Prompt } from 'react-router-dom';
+// import { Prompt } from 'react-router-dom';
 
 import {
   Button,
   CircularProgress
 } from '@material-ui/core';
-import Card from '../UI/Card';
-import LoadingSpinner from '../UI/LoadingSpinner';
-import classes from './ReginfoForm.module.css';
+// import Card from '../UI/Card';
+// import LoadingSpinner from '../UI/LoadingSpinner';
+// import classes from './ReginfoForm.module.css';
 
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
@@ -16,7 +16,6 @@ import { InputField, CheckboxField, SelectField, HiddenField } from '../FormFiel
 const countries = require('./countries.json');
 const states = require('./states.json');
 const jobTypes = require('./jobtypes.json');
-
 
 const ReginfoForm = (props) => {
 //   const [isEntering, setIsEntering] = useState(false);
@@ -137,21 +136,20 @@ const ReginfoForm = (props) => {
             fullWidth
             />
 
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      color="primary"
-                            className=""
-                          disabled={isSubmitting}
-                        //   onFocus={formFocusedHandler}
-
-                    >
-                        Continue
-                    </Button>
-                    <pre>{JSON.stringify(values,null,2)}</pre>
-                    <pre>{JSON.stringify(errors,null,2)}</pre>
-                    </Form>
-                    )}
+            <Button
+                type="submit"
+                variant="contained"
+                color="primary"
+                className=""
+                disabled={isSubmitting}
+            //   onFocus={formFocusedHandler}
+            >
+            Continue
+            </Button>
+            {/* <pre>{JSON.stringify(values,null,2)}</pre>
+            <pre>{JSON.stringify(errors,null,2)}</pre> */}
+            </Form>
+            )}
         </Formik>
     </Fragment>
   );
