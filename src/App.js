@@ -27,6 +27,13 @@ function App() {
                 </MaterialLayout>
             </Layout>
           </Route>
+          <Route path="/attendee/items">
+            <Layout>
+                <MaterialLayout>
+                    <Items />
+                </MaterialLayout>
+            </Layout>
+          </Route>
           <Route path="/attendee/items/:uuid">
             <Layout>
                 <MaterialLayout>

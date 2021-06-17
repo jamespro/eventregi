@@ -1,130 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import {
-  Button,
-  CircularProgress
-} from '@material-ui/core';
-import { Formik, Form, useField } from 'formik';
-import * as Yup from 'yup';
-import { InputField, CheckboxField, SelectField, HiddenField } from '../components/FormFields';
+import { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+
+import ReginfoForm from '../components/Forms/ReginfoForm';
+import useHttp from '../hooks/use-http';
 import { register } from '../lib/api';
 
-const countries = require('../components/Forms/countries.json');
-const states = require('../components/Forms/states.json');
-const jobTypes = require('../components/Forms/jobtypes.json');
-
-function _handleSubmit(values, actions) {
-    register(values, actions);
-}
 
 const Reginfo = () => {
-    return (
-        <>
-        <h1>Contact Info</h1>
-        <Formik
-            initialValues={{
-                showcode: 'myst1021',
-                email: '',
-                firstName: '',
-                lastName: '',
-                address1: '',
-                address2: '',
-                city: '',
-                state: '',
-                zipcode: '',
-                country: '',
-                useAddressForPaymentDetails: '',
-                acceptedTerms: false, // added for our checkbox
-                jobType: '', // added for our select
-            }}
-            validationSchema={Yup.object({
-                firstName: Yup.string()
-                    .max(15, 'Must be 15 characters or less')
-                    .required('Required'),
-                lastName: Yup.string()
-                    .max(20, 'Must be 20 characters or less')
-                    .required('Required'),
-                address1: Yup.string()
-                    .max(50, 'Must be 50 characters or less')
-                    .required('Required'),
-                address2: Yup.string()
-                    .max(50, 'Must be 50 characters or less'),
-                city: Yup.string()
-                    .max(50, 'Must be 50 characters or less')
-                    .required('Required'),
-                state: Yup.string()
-                    .max(20, 'Must be 20 characters or less'),
-                zipcode: Yup.string()
-                    .max(6, 'Must be 6 characters or less')
-                    .required('Required'),
-                country: Yup.string()
-                    .required('Required'),
-                email: Yup.string()
-                    .email('Invalid email address')
-                    .required('Required'),
-                acceptedTerms: Yup.boolean()
-                    .required('Required')
-                    .oneOf([true], 'You must accept the terms and conditions.'),
-                jobType: Yup.string()
-                    .oneOf(
-                    ['designer', 'development', 'product', 'other'],
-                    'Invalid Job Type'
-                    )
-                    .required('Required'),
-            })}
-            onSubmit={_handleSubmit}
-        >
-            <Form>
-          <HiddenField name="showcode" placeholder="myst1021" fullWidth />
-          <InputField name="firstName" label="First Name" placeholder="Jane" fullWidth />
-          <InputField name="lastName" label="Last Name" placeholder="Doe" fullWidth />
-          <InputField name="address1" label="Address 1" placeholder="address1" fullWidth />
-          <InputField name="address2" label="Address 2" placeholder="address2" fullWidth />
-          <InputField name="city" label="City" placeholder="City" fullWidth />
-          <SelectField
-            name="state"
-            label="State"
-            data={states}
-            fullWidth
-          />
-          <InputField name="zipcode" label="Zip Code" placeholder="Zip Code" fullWidth />
-          <SelectField
-            name="country"
-            label="Country"
-            data={countries}
-            fullWidth
-          />
-           <InputField name="email" label="Email Address" placeholder="jane@test.com" fullWidth />
+  const { sendRequest, status } = useHttp(register);
+  const history = useHistory();
 
-          <SelectField
-            name="jobType"
-            label="Job Type"
-            data={jobTypes}
-            fullWidth
-            />
-          <CheckboxField
-            name="useAddressForPaymentDetails"
-            label="Use address for payment details"
-            fullWidth
-            />
-          <CheckboxField
-            name="acceptedTerms"
-            label="I accept the terms and conditions"
-            fullWidth
-            />
+  useEffect(() => {
+    if (status === 'completed') {
+      history.push('/attendee/items');
+    }
+  }, [status, history]);
 
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      color="primary"
-                      className=""
-                    >
-                      Continue
-                    </Button>
-            </Form>
-        </Formik>
-        </>
-    );
+  const addQuoteHandler = (quoteData) => {
+    sendRequest(quoteData);
+  };
+
+  return <ReginfoForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler} />;
 };
 
 export default Reginfo;
