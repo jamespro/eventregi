@@ -16,11 +16,11 @@ const Reginfo = () => {
     }
   }, [status, history]);
 
-  const addQuoteHandler = (quoteData) => {
-    sendRequest(quoteData);
+  const registerHandler = (registerData) => {
+    sendRequest(registerData);
   };
 
-  return <ReginfoForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler} />;
+  return <ReginfoForm isLoading={status === 'pending'} onRegister={registerHandler} />;
 };
 
 export default Reginfo;

@@ -21,18 +21,8 @@ const jobTypes = require('./jobtypes.json');
 const ReginfoForm = (props) => {
 //   const [isEntering, setIsEntering] = useState(false);
 
-//   const authorInputRef = useRef();
-//   const textInputRef = useRef();
-
   function submitFormHandler(values) {
-    // event.preventDefault();
-
-    // const enteredAuthor = authorInputRef.current.value;
-    // const enteredText = textInputRef.current.value;
-
-    // optional: Could validate here
-
-    props.onAddQuote({ values });
+    props.onRegister({ values });
   }
 
 //   const finishEnteringHandler = () => {
