@@ -20,4 +20,5 @@ export async function register (values, actions) {
     //TODO: Do something after you get a successful response
     //TODO: display success message, or dialog, or have another page load with instructions, or a configurable redirect URL
     actions.setSubmitting(false);
+    return (data);
 }

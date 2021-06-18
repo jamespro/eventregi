@@ -7,11 +7,12 @@ import { register } from '../lib/api';
 
 
 const Reginfo = () => {
-  const { sendRequest, status } = useHttp(register);
+  const { sendRequest, status, data } = useHttp(register);
   const history = useHistory();
 
   useEffect(() => {
-    if (status === 'completed') {
+      if (status === 'completed') {
+          console.log(data);
       history.push('/attendee/items');
     }
   }, [status, history]);
