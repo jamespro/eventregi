@@ -20,6 +20,13 @@ function App() {
             <Landing />
               <Footer />
           </Route>
+          <Route path="/attendee/reginfo">
+            <Layout>
+                <MaterialLayout>
+                    <Reginfo />
+                </MaterialLayout>
+            </Layout>
+          </Route>
           <Route path="/attendee/reginfo/:showcode">
             <Layout>
                 <MaterialLayout>
