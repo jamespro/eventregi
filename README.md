@@ -44,11 +44,14 @@ Future features may include:
 ## TODO - MVP v1
 - [ ] FILL IN README
 - [ ] Header: Add graphic banner
+- [ ] Nav: make future steps not clickable (or switch to use MUI stepper)
 - [ ] v2? DB connect code, move to separate file and include
-- [ ] **FORMS/Formik: put MaterialUI onto form components incl. buttons**
+- [x] FORMS/Formik: put MaterialUI onto form components incl. buttons
 - [x] Reginfo: Make State and Country use select inputs
 - [x] FORMS/Formik: Use form components from separate files
+- [ ] **FORMS/Formik: Add Radio buttons form component**
 - [ ] FORMS/Formik: initial values, what to do for this? e.g. uuid
+- [ ] Get uuid from localStorage, or if not in localstorage, then URL params
 - [ ] v2 put UUID into route so you can track progress, return to step
 - [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
 - [ ] v2 Reginfo: Get showcode from URL, to insert into default hidden field (and other uses)
