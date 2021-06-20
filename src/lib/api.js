@@ -16,9 +16,13 @@ export async function register (values, actions) {
     }
     const response = await fetch(API_SERVER+'/api/register', requestOptions);
     const data = await response.json();
-    console.log(data);
+    console.log('this does output to browser here:',data);
+    console.log('uuid:', data.uuid);
+    localStorage.setItem('uuid', data.uuid);
+    localStorage.setItem('showcode', data.showcode);
     //TODO: Do something after you get a successful response
     //TODO: display success message, or dialog, or have another page load with instructions, or a configurable redirect URL
     actions.setSubmitting(false);
-    return (data);
+    //Not sure where, if anywhere, this goes to. Was trying to return it to use it in redirection.
+    return {uuid: data.uuid};
 }
