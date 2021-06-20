@@ -11,7 +11,7 @@ import {
 
 import { Formik, Form, useField } from 'formik';
 import * as Yup from 'yup';
-import { InputField, CheckboxField, SelectField, HiddenField } from '../FormFields';
+import { InputField, CheckboxField, ItemCheckboxField, SelectField, HiddenField, FormHeader } from '../FormFields';
 
 const ItemsForm = (props) => {
 //   const [isEntering, setIsEntering] = useState(false);
@@ -36,57 +36,30 @@ const ItemsForm = (props) => {
           'Are you sure you want to leave? All your entered data will be lost!'
         }
       /> */}
-        <h1>Contact Information</h1>
+          <h1>Items</h1>
+          <p>Choose your conference package and additional items!</p>
         <Formik
             initialValues={{
-                showcode: 'myst1021',
-                email: '',
-                firstName: '',
-                lastName: '',
-                address1: '',
-                address2: '',
-                city: '',
-                state: '',
-                zipcode: '',
-                country: '',
-                useAddressForPaymentDetails: '',
-                acceptedTerms: false, // added for our checkbox
-                jobType: '', // added for our select
+                uuid: '', // set this to the uuid from LocalStorage or url params
+                showcode: 'myst1021', // set this to the showcode from LocalStorage or user record or url params
+                itemEXPO: '', //should be a free item
+                itemCONF: '',
+                itemCONFPREM: '', // could auto pack other items like 1 BANQ and 1 TSHIRT
+                itemONEDAYSAT: '',
+                itemONEDAYSUN: '',
+                itemBANQ: '', // can add select 1-5 tickets
+                itemBANQTABLE: '',
+                itemTOUR1: '',
+                itemTOUR2: '',
+                itemTSHIRT: '', // can add sizes
             }}
-            validationSchema={Yup.object({
-                firstName: Yup.string()
-                    .max(15, 'Must be 15 characters or less')
-                    .required('Required'),
-                lastName: Yup.string()
-                    .max(20, 'Must be 20 characters or less')
-                    .required('Required'),
-                address1: Yup.string()
-                    .max(50, 'Must be 50 characters or less')
-                    .required('Required'),
-                address2: Yup.string()
-                    .max(50, 'Must be 50 characters or less'),
-                city: Yup.string()
-                    .max(50, 'Must be 50 characters or less')
-                    .required('Required'),
-                state: Yup.string()
-                    .max(20, 'Must be 20 characters or less'),
-                zipcode: Yup.string()
-                    .max(6, 'Must be 6 characters or less')
-                    .required('Required'),
-                country: Yup.string()
-                    .required('Required'),
-                email: Yup.string()
-                    .email('Invalid email address')
-                    .required('Required'),
-                acceptedTerms: Yup.boolean()
+              validationSchema={Yup.object({
+                //TODO: Does showcode need to be submitted every time?
+                //TODO: needs to require uuid but uuid is a hidden field
+                //TODO: needs to require one of packages: either EXPO or CONF
+                //NOTE: Maybe everyone is forced to get EXPO for now and the others are additional.
+                itemEXPO: Yup.boolean()
                     .required('Required')
-                    .oneOf([true], 'You must accept the terms and conditions.'),
-                jobType: Yup.string()
-                    .oneOf(
-                    ['designer', 'development', 'product', 'other'],
-                    'Invalid Job Type'
-                    )
-                    .required('Required'),
             })}
             // onSubmit={_handleSubmit}
           onSubmit={submitFormHandler}
@@ -95,22 +68,98 @@ const ItemsForm = (props) => {
           >{({ values, errors, isSubmitting }) => (
             <Form>
           <HiddenField name="showcode" placeholder="myst1021" fullWidth />
-          <InputField name="firstName" label="First Name" placeholder="Jane" fullWidth />
-          <InputField name="lastName" label="Last Name" placeholder="Doe" fullWidth />
-          <InputField name="address1" label="Address 1" placeholder="address1" fullWidth />
-          <InputField name="address2" label="Address 2" placeholder="address2" fullWidth />
-          <InputField name="city" label="City" placeholder="City" fullWidth />
-          <InputField name="zipcode" label="Zip Code" placeholder="Zip Code" fullWidth />
-           <InputField name="email" label="Email Address" placeholder="jane@test.com" fullWidth />
 
-          <CheckboxField
-            name="useAddressForPaymentDetails"
-            label="Use address for payment details"
+          <FormHeader className="header-conf">CONFERENCE OPTIONS</FormHeader>
+          <ItemCheckboxField
+            name="itemEXPO"
+            label="Expo Only"
+            itemcode="itemEXPO"
+            itempricekey="itemEXPO|1"
+            price="0.00"
             fullWidth
             />
-          <CheckboxField
-            name="acceptedTerms"
-            label="I accept the terms and conditions"
+
+          <ItemCheckboxField
+            name="itemCONF"
+            label="Full Conference"
+            itemcode="itemCONF"
+            itempricekey="itemCONF|2"
+            price="200.00"
+            fullWidth
+            />
+
+          <ItemCheckboxField
+            name="itemCONFPREMIUM"
+            label="Full Conference-Premium"
+            itemcode="itemCONFPREMIUM"
+            itempricekey="itemCONFPREMIUM|3"
+            price="250.00"
+            fullWidth
+            />
+
+          <ItemCheckboxField
+            name="itemONEDAYSAT"
+            label="Saturday Conference Only"
+            itemcode="itemONEDAYSAT"
+            itempricekey="itemONEDAYSAT|4"
+            price="125.00"
+            fullWidth
+            />
+
+          <ItemCheckboxField
+            name="itemONEDAYSUN"
+            label="Sunday Conference Only"
+            itemcode="itemONEDAYSUN"
+            itempricekey="itemONEDAYSUN|5"
+            price="125.00"
+            fullWidth
+            />
+
+          <FormHeader className="header-banquet">BANQUET</FormHeader>
+          <ItemCheckboxField
+            name="itemBANQ"
+            label="Banquet Ticket"
+            itemcode="itemBANQ"
+            itempricekey="itemBANQ|6"
+            price="50.00"
+            fullWidth
+            />
+
+          <ItemCheckboxField
+            name="itemBANQTABLE"
+            label="Banquet - Table of 6"
+            itemcode="itemBANQTABLE"
+            itempricekey="itemBANQTABLE|7"
+            price="250.00"
+            fullWidth
+            />
+
+          <FormHeader className="header-tours">MYSTERY TOURS</FormHeader>
+          <ItemCheckboxField
+            name="itemTOUR1"
+            label="Tour 1 Ticket - Mystery Bookstore Tour"
+            itemcode="itemTOUR1"
+            itempricekey="itemTOUR1|8"
+            price="65.00"
+            fullWidth
+            />
+
+          <ItemCheckboxField
+            name="itemTOUR2"
+            label="Tour 2 Ticket - Haunted Locations"
+            itemcode="itemTOUR2"
+            itempricekey="itemTOUR2|9"
+            price="95.00"
+            fullWidth
+            />
+
+          <FormHeader className="header-tshirt">T-SHIRT</FormHeader>
+          <ItemCheckboxField
+            name="itemTSHIRT"
+            label="MysteryCon 2021 T-shirt (one size fits all)"
+            itemcode="itemTSHIRT"
+            itempricekey="itemTSHIRT|10"
+            price="35.00"
             fullWidth
             />
 

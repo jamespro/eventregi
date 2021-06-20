@@ -48,8 +48,15 @@ Future features may include:
 - [ ] v2? DB connect code, move to separate file and include
 - [x] FORMS/Formik: put MaterialUI onto form components incl. buttons
 - [x] Reginfo: Make State and Country use select inputs
-- [x] FORMS/Formik: Use form components from separate files
-- [ ] **FORMS/Formik: Add Radio buttons form component**
+- [x] FORMS/FORMIK: Use form components from separate files
+- [x] Items: Add initial items
+- [x] Items: Add price on-page; align right
+- [ ] FORMS/FORMIK: Add Radio buttons form component (might not need to right now)
+- [ ] Items (FORMIK/MaterialUI): Add deselect conflicting items (FormGroup?)
+- [ ] Items: Add separate records for each item, referenced back by uuid to registrant.
+- [ ] Items: each one needs recordstatus (temp or purchased for example, or removed, or waiting list?)
+- [ ] Item: Do I need one schema for ITEM? And another for ITEMS?
+- [ ] Item: Need to loop through adding items, unlike when adding one user?
 - [ ] FORMS/Formik: initial values, what to do for this? e.g. uuid
 - [ ] Get uuid from localStorage, or if not in localstorage, then URL params
 - [ ] v2 put UUID into route so you can track progress, return to step
