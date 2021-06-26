@@ -18,11 +18,11 @@ const MainNavigation = () => {
               Contact Info
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink activeClassName={classes.active} to='/attendee/demo'>
               Demographics
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink activeClassName={classes.active} to='/attendee/items'>
               Items
