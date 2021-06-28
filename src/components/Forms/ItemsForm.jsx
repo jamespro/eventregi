@@ -19,7 +19,7 @@ const ItemsForm = (props) => {
   function submitFormHandler(values) {
     props.onAddItems({ values });
   }
-
+  const savedUuid = localStorage.getItem('uuid')
 //   const finishEnteringHandler = () => {
 //     setIsEntering(false);
 //   };
@@ -40,11 +40,11 @@ const ItemsForm = (props) => {
           <p>Choose your conference package and additional items!</p>
         <Formik
             initialValues={{
-                uuid: '', // set this to the uuid from LocalStorage or url params
+                uuid: {savedUuid}, // set this to the uuid from LocalStorage or url params
                 showcode: 'myst1021', // set this to the showcode from LocalStorage or user record or url params
                 itemEXPO: '', //should be a free item
                 itemCONF: '',
-                itemCONFPREM: '', // could auto pack other items like 1 BANQ and 1 TSHIRT
+                itemCONFPREMIUM: '', // could auto pack other items like 1 BANQ and 1 TSHIRT
                 itemONEDAYSAT: '',
                 itemONEDAYSUN: '',
                 itemBANQ: '', // can add select 1-5 tickets
@@ -67,7 +67,8 @@ const ItemsForm = (props) => {
 
           >{({ values, errors, isSubmitting }) => (
             <Form>
-          <HiddenField name="showcode" placeholder="myst1021" fullWidth />
+          <HiddenField name="uuid" />
+          <HiddenField name="showcode" placeholder="myst1021" />
 
           <FormHeader className="header-conf">CONFERENCE OPTIONS</FormHeader>
           <ItemCheckboxField
@@ -173,8 +174,8 @@ const ItemsForm = (props) => {
             >
             Continue
             </Button>
-            {/* <pre>{JSON.stringify(values,null,2)}</pre>
-            <pre>{JSON.stringify(errors,null,2)}</pre> */}
+            <pre>{JSON.stringify(values,null,2)}</pre>
+            <pre>{JSON.stringify(errors,null,2)}</pre>
             </Form>
             )}
         </Formik>

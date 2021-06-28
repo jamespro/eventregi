@@ -33,7 +33,7 @@ export async function addItems (values, actions) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values)
     }
-    const response = await fetch(API_SERVER+'/api/items', requestOptions);
+    const response = await fetch(API_SERVER+'/api/addItems', requestOptions);
     const data = await response.json();
     console.log('this does output to browser here:',data);
     console.log('uuid:', data.uuid);
