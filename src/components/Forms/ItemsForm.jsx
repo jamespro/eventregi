@@ -40,7 +40,7 @@ const ItemsForm = (props) => {
           <p>Choose your conference package and additional items!</p>
         <Formik
             initialValues={{
-                uuid: {savedUuid}, // set this to the uuid from LocalStorage or url params
+                uuid: savedUuid, // set this to the uuid from LocalStorage or url params
                 showcode: 'myst1021', // set this to the showcode from LocalStorage or user record or url params
                 itemEXPO: '', //should be a free item
                 itemCONF: '',
