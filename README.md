@@ -13,7 +13,8 @@ Initial scope:
 
 * Multi-step checkout process using **React**, with **Formik** and **Material UI**, and **MongoDB**.
 
-*"Join us at MysteryCon 2021: For True Fans of Mystery!"*
+[*"Join us at MysteryCon 2021: For True Fans of Mystery!"*](https://eventregi.herokuapp.com/)
+
 | ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/welcome-sm.png) | 
 |:--:| 
 | *Landing Page* |
