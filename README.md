@@ -15,11 +15,9 @@ Initial scope:
 
 *"Join us at MysteryCon 2021: For True Fans of Mystery!"*
 ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/welcome-sm.png)
-
 | ![RegInfo](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/reginfo-sm.png) | 
 |:--:| 
 | *RegInfo* |
-
 | ![Items](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/items-sm.png) | 
 |:--:| 
 | *Items* |
