@@ -20,10 +20,10 @@ Initial scope:
 |:--:| 
 | *RegInfo* |
 
+| ![Items](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/items-sm.png) | 
+|:--:| 
+| *Items* |
 
-[![RegInfo](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/reginfo-sm.png)](https://eventregi.herokuapp.com/)
-
-[![Item Selection](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/items-sm.png)](https://eventregi.herokuapp.com/)
 
 ## Tech used
 * JavaScript
