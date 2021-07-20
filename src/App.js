@@ -9,6 +9,7 @@ import Layout from './components/Layout/Layout';
 import Landing from './pages/Landing';
 import Reginfo from './pages/Reginfo';
 import Items from './pages/Items';
+import Review from './pages/Review';
 
 function App() {
   return (
@@ -45,6 +46,20 @@ function App() {
             <Layout>
                 <MaterialLayout>
                     <Items />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+          <Route path="/attendee/review">
+            <Layout>
+                <MaterialLayout>
+                    <Review />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+          <Route path="/attendee/review/:uuid">
+            <Layout>
+                <MaterialLayout>
+                    <Review />
                 </MaterialLayout>
             </Layout>
           </Route>

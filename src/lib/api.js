@@ -43,3 +43,14 @@ export async function addItems (values, actions) {
     //Not sure where, if anywhere, this goes to. Was trying to return it to use it in redirection.
     return null;
 }
+
+export async function getUser (values) {
+    const requestOptions = {
+        method: 'GET',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values)
+    }
+    const response = await fetch(API_SERVER+'/api/user', requestOptions);
+    const data = await response.json();
+    return data;
+}
