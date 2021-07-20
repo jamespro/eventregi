@@ -1,5 +1,6 @@
 # EventReg - Register for MysteryCon 2021!
-## Description
+![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/banner.png)
+## Project Description
 
 Join us at MysteryCon 2021: For True Fans of Mystery
 
@@ -11,7 +12,7 @@ Link to live demo: [EventRegi Demo](https://eventregi.herokuapp.com/)
 
 This project uses an API I am developing in another repo for data management. Link to my API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
 
-![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/banner.png)
+![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/welcome-sm.png)
 
 ## Tech used
 * JavaScript
