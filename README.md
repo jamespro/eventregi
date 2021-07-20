@@ -21,9 +21,9 @@ Initial scope:
 | *RegInfo* |
 
 
-[![RegInfo](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/reginfo-sm.png)](https://github.com/jamespro/eventreg/)
+[![RegInfo](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/reginfo-sm.png)](https://eventregi.herokuapp.com/)
 
-[![Item Selection](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/reginfo-sm.png)](https://github.com/jamespro/eventreg/)
+[![Item Selection](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/items-sm.png)](https://eventregi.herokuapp.com/)
 
 ## Tech used
 * JavaScript
