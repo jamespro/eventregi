@@ -1,11 +1,15 @@
-# EventReg - React
+# EventReg - Register for MysteryCon 2021!
 ## Description
 
-Initial scope is to register an attendee for an event. Currently multi-step checkout process using Formik and Material UI, using MongoDB.
+Join us at MysteryCon 2021: For True Fans of Mystery
+
+Initial scope: Register as an attendee for an event--Mystery Convention 2021. 
+
+Currently a multi-step checkout process using **React**, with **Formik** and **Material UI**, and **MongoDB**.
 
 Link to live demo: [EventRegi Demo](https://eventregi.herokuapp.com/)
 
-This repo uses an API I am developing in another repo for data management. Link to my API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
+This project uses an API I am developing in another repo for data management. Link to my API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
 
 ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/banner.png)
 
@@ -26,12 +30,12 @@ Also:
 
 Future features may include:
 * Multi-page registration
-  * Demos
-  * Conditional Demos
+  * Demographic information
+  * * Conditional Demos
   * Items
   * Sessions
-  * Visa
-  * Invite a friend
+  * Visa (and print a visa letter in PDF)
+  * Invite a friend (referral)
   * Payment
 * Registrant admin: Update record
 * Upgrade / Add items
