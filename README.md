@@ -14,15 +14,17 @@ Initial scope:
 * Multi-step checkout process using **React**, with **Formik** and **Material UI**, and **MongoDB**.
 
 *"Join us at MysteryCon 2021: For True Fans of Mystery!"*
-![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/welcome-sm.png)
+| ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/welcome-sm.png) | 
+|:--:| 
+| *Landing Page* |
 
 | ![RegInfo](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/reginfo-sm.png) | 
 |:--:| 
-| *RegInfo* |
+| *Contact Info* |
 
 | ![Items](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/items-sm.png) | 
 |:--:| 
-| *Items* |
+| *Item Selection* |
 
 
 ## Tech used
