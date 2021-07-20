@@ -4,11 +4,12 @@ Link to live demo: [EventRegi Demo](https://eventregi.herokuapp.com/)
 This project uses an API I am developing in another repo for data management. Link to my API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
 ## About this Project
 
-Initial scope: Register as an attendee for an event--Mystery Convention 2021. 
+Initial scope: 
+* Register as an attendee for an event--Mystery Convention 2021. 
 
-Currently a multi-step checkout process using **React**, with **Formik** and **Material UI**, and **MongoDB**.
+* Multi-step checkout process using **React**, with **Formik** and **Material UI**, and **MongoDB**.
 
-"Join us at MysteryCon 2021: For True Fans of Mystery!"
+*"Join us at MysteryCon 2021: For True Fans of Mystery!"*
 ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/welcome-sm.png)
 
 ## Tech used
