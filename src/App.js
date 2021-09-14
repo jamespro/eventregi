@@ -9,7 +9,7 @@ import Layout from './components/Layout/Layout';
 import Landing from './pages/Landing';
 import Reginfo from './pages/Reginfo';
 import Items from './pages/Items';
-import Review from './pages/Review';
+//import Review from './pages/Review';
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
         <Switch>
           <Route path="/" exact>
             <Landing />
-              <Footer />
+            <Footer />
           </Route>
           <Route path="/attendee/reginfo">
             <Layout>
@@ -49,7 +49,8 @@ function App() {
                 </MaterialLayout>
             </Layout>
           </Route>
-          <Route path="/attendee/review">
+{/* 
+                  <Route path="/attendee/review">
             <Layout>
                 <MaterialLayout>
                     <Review />
@@ -62,8 +63,9 @@ function App() {
                     <Review />
                 </MaterialLayout>
             </Layout>
-          </Route>
-          {/* <Route path="/checkout">
+          </Route> */}
+
+                  {/* <Route path="/checkout">
             <div>
                 <MaterialLayout>
                     <CheckoutPage />

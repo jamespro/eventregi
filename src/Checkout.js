@@ -1,5 +1,5 @@
 import React from 'react';
-import MaterialLayout from './components/layout/MaterialLayout';
+import MaterialLayout from './components/Layout/MaterialLayout';
 import CheckoutPage from './components/CheckoutPage';
 function App() {
   return (
