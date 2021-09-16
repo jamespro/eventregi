@@ -60,6 +60,19 @@ Future features may include:
   * Create, View, Edit, Delete
 * Reporting with graphic packages
 
+## TODO - Currently Working On
+* Review step: 
+  * Need to finish defining/setting up the Review route and files
+  * Compare Items to Review
+  * Items save to DB, user redirected to review step. 
+  * **CREATING ReviewReginfo and ReviewItems to get the content onto the Review page... defining getUser in api.js to get the user info... Go over to the API now**
+  * Retrieve items
+  * Display on page
+  * Show prices
+  * UUID is in the URL, so can develop the "retrieve from abandonment"
+* Use state or context to keep the UUID, maybe other info?
+* 
+
 ## TODO - MVP v1
 - [ ] FILL IN README
 - [ ] Header: Add graphic banner
@@ -77,6 +90,7 @@ Future features may include:
 - [ ] Item: Do I need one schema for ITEM? And another for ITEMS?
 - [ ] Item: Need to loop through adding items, unlike when adding one user?
 - [ ] FORMS/Formik: initial values, what to do for this? e.g. uuid
+- [ ] FORMS/Formik: passing by 
 - [ ] Get uuid from localStorage, or if not in localstorage, then URL params
 - [ ] v2 put UUID into route so you can track progress, return to step
 - [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
