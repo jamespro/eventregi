@@ -1,15 +1,15 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import MainHeader from './components/MainHeader';
 import MaterialLayout from './components/Layout/MaterialLayout';
 import Footer from './components/Footer';
-import CheckoutPage from './components/CheckoutPage';
+//import CheckoutPage from './components/CheckoutPage';
 import Layout from './components/Layout/Layout';
 import Landing from './pages/Landing';
 import Reginfo from './pages/Reginfo';
 import Items from './pages/Items';
-//import Review from './pages/Review';
+import Review from './pages/Review';
 
 function App() {
   return (
@@ -49,8 +49,7 @@ function App() {
                 </MaterialLayout>
             </Layout>
           </Route>
-{/* 
-                  <Route path="/attendee/review">
+           <Route path="/attendee/review">
             <Layout>
                 <MaterialLayout>
                     <Review />
@@ -63,7 +62,7 @@ function App() {
                     <Review />
                 </MaterialLayout>
             </Layout>
-          </Route> */}
+          </Route>
 
                   {/* <Route path="/checkout">
             <div>

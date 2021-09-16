@@ -7,7 +7,8 @@ import { addItems } from '../lib/api';
 
 
 const Items = () => {
-  const { sendRequest, status, data } = useHttp(addItems);
+    const { sendRequest, status, data } = useHttp(addItems);
+    // this useEffect is to redirect after the items were added, and useHistory will change the browser's history to make it the new URL that we want.
   const history = useHistory();
   useEffect(() => {
       if (status === 'completed') {

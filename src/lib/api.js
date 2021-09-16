@@ -16,7 +16,7 @@ export async function register (values, actions) {
     }
     const response = await fetch(API_SERVER+'/api/register', requestOptions);
     const data = await response.json();
-    console.log('this does output to browser here:',data);
+    console.log('this does output to browser here (api.js: register):',data);
     console.log('uuid:', data.uuid);
     localStorage.setItem('uuid', data.uuid);
     localStorage.setItem('showcode', data.showcode);
@@ -35,7 +35,7 @@ export async function addItems (values, actions) {
     }
     const response = await fetch(API_SERVER+'/api/addItems', requestOptions);
     const data = await response.json();
-    console.log('this does output to browser here:',data);
+    console.log('this does output to browser here (api.js:addItems):',data);
     console.log('uuid:', data.uuid);
     localStorage.setItem('uuid', data.uuid);
     localStorage.setItem('showcode', data.showcode);
@@ -44,13 +44,20 @@ export async function addItems (values, actions) {
     return null;
 }
 
-export async function getUser (values) {
+export async function getUser(values) {
+    //OK THIS NEVER EVEN GETS CALLED????
+    console.log(' getUser values:', values);
     const requestOptions = {
         method: 'GET',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values)
     }
+//RESUME HERE 20210915-20:40:46
+
+    //maybe this GET isn't formatted or set up properly?
+    // or it should be a POST, even thoug it is retrieving data?
     const response = await fetch(API_SERVER+'/api/user', requestOptions);
     const data = await response.json();
+    console.log('data from getUser:', data);
     return data;
 }
