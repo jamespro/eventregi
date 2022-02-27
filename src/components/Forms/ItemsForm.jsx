@@ -157,7 +157,7 @@ const ItemsForm = (props) => {
           <FormHeader className="header-tshirt">T-SHIRT</FormHeader>
           <ItemCheckboxField
             name="itemTSHIRT"
-            label="MysteryCon 2021 T-shirt (one size fits all)"
+            label="MysteryCon 2022 T-shirt (one size fits all)"
             itemcode="itemTSHIRT"
             itempricekey="itemTSHIRT|10"
             price="35.00"

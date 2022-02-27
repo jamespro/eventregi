@@ -15,7 +15,7 @@ export default function Header() {
 //       <Toolbar>
 //         <Typography variant="h6" color="inherit" noWrap>
 //             <Link color="inherit" href="/">
-//                 Mystery Convention 2021 - Attendee Registration 
+//                 Mystery Convention 2022 - Attendee Registration 
 //             </Link>
 //         </Typography>
 //       </Toolbar>
