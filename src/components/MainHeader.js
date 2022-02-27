@@ -6,7 +6,7 @@ const MainHeader = () => {
   return (
       <header className={classes.header}>
           <section>
-              <h1>Mystery Convention 2021</h1><p>Oct 29-31, 2021</p>
+              <h1>Mystery Convention 2022</h1><p>Oct 29-31, 2022</p>
           </section>
     </header>
   );

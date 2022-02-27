@@ -16,8 +16,8 @@ const Landing = () => {
                             <source src="img/mystery-bg-purple.webm" type="video/webm" />
                         </video>
                         <div className={classes.headertext}>
-                            <h2>Welcome to <span>Mystery Convention 2021</span></h2>
-                            <p><Link to="/attendee/reginfo/myst1221" className={classes.button2021} >Begin Attendee Registration</Link></p>
+                            <h2>Welcome to <span>Mystery Convention 2022</span></h2>
+                            <p><Link to="/attendee/reginfo/myst1221" className={classes.button2022} >Begin Attendee Registration</Link></p>
                         </div>
                     </section>
                 </main>
