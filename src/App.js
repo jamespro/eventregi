@@ -1,47 +1,77 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 import MainHeader from './components/MainHeader';
 import MaterialLayout from './components/Layout/MaterialLayout';
-import CheckoutPage from './components/CheckoutPage';
+import Footer from './components/Footer';
+//import CheckoutPage from './components/CheckoutPage';
 import Layout from './components/Layout/Layout';
+import Landing from './pages/Landing';
 import Reginfo from './pages/Reginfo';
+import Items from './pages/Items';
+import Review from './pages/Review';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <MainHeader />
-        <Layout>
         <Switch>
-        <Route path="/" exact>
-            <div>
-            <p>Welcome to Mystery Convention 2021!</p>
-            <p><Link to="/attendee/reginfo/myst1221">Begin Attendee Registration</Link></p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            </div>
-            {/* <Link to='/checkout'>Link to checkout</Link> */}
+          <Route path="/" exact>
+            <Landing />
+            <Footer />
           </Route>
-          {/* <Route path="/checkout">
+          <Route path="/attendee/reginfo">
+            <Layout>
+                <MaterialLayout>
+                    <Reginfo />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+          <Route path="/attendee/reginfo/:showcode">
+            <Layout>
+                <MaterialLayout>
+                    <Reginfo />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+          <Route path="/attendee/items">
+            <Layout>
+                <MaterialLayout>
+                    <Items />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+          <Route path="/attendee/items/:uuid">
+            <Layout>
+                <MaterialLayout>
+                    <Items />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+           <Route path="/attendee/review">
+            <Layout>
+                <MaterialLayout>
+                    <Review />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+          <Route path="/attendee/review/:uuid">
+            <Layout>
+                <MaterialLayout>
+                    <Review />
+                </MaterialLayout>
+            </Layout>
+          </Route>
+
+                  {/* <Route path="/checkout">
             <div>
                 <MaterialLayout>
                     <CheckoutPage />
                 </MaterialLayout>
             </div>
           </Route> */}
-            <Route path="/attendee/reginfo/:showcode">
-               <Reginfo />
-          </Route>
-
         </Switch>
-        </Layout>
       </div>
     </Router>
   );
