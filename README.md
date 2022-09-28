@@ -74,7 +74,7 @@ Future features may include:
 * 
 
 ## TODO - MVP v1
-- [ ] FILL IN README
+- [x] FILL IN README
 - [ ] Header: Add graphic banner
 - [ ] Nav: make future steps not clickable (or switch to use MUI stepper)
 - [ ] v2? DB connect code, move to separate file and include
