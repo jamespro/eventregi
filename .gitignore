@@ -19,6 +19,7 @@ tmp
 #Build
 public/css/main.css
 .nyc_output/*
+build/*
 
 # API keys and secrets
 .env
