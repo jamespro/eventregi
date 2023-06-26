@@ -26,7 +26,7 @@ let host = window.location.host;
 if (window.location.hostname === 'localhost') {
     host = 'localhost:3333';
 } else {
-    host = 'eventregg.herokuapp.com';
+    host = 'eventregapi.netlify.app';
 }
 
 let API_SERVER = protocol + '//' + host;
