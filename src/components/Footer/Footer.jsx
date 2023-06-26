@@ -6,7 +6,7 @@ export default function Footer() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       {new Date().getFullYear()}&nbsp; 
-      <Link color="inherit" href="https://eventregi.herokuapp.com/">
+      <Link color="inherit" href="https://eventregi.netlify.app/">
         Event Registration 
       </Link>
     </Typography>

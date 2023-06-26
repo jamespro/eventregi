@@ -2,78 +2,84 @@
 
 ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/banner.png)
 
-Link to live demo: [EventRegi Demo](https://eventregi.herokuapp.com/)
+Link to live demo: [EventRegi Demo](https://eventregi.netlify.app/)
 
 This project uses an API I am developing in another repo for data management. Link to my API repo: [EventRegAPI Repo](https://github.com/jamespro/eventreg/)
+
 ## About this Project
 
-Initial scope: 
+Initial scope:
 
-* Register as an attendee for an event--Mystery Convention 2022. 
+- Register as an attendee for an event--Mystery Convention 2022.
 
-* Multi-step checkout process using **React**, with **Formik** and **Material UI**, and **MongoDB**.
+- Multi-step checkout process using **React**, with **Formik** and **Material UI**, and **MongoDB**.
 
-[*Join us at MysteryCon 2022: For True Fans of Mystery!*](https://eventregi.herokuapp.com/)
+[_Join us at MysteryCon 2022: For True Fans of Mystery!_](https://eventregi.netlify.app/)
 
-| ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/welcome-sm.png) | 
-|:--:| 
-| *Landing Page* |
+| ![Event Reg](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/welcome-sm.png) |
+| :-----------------------------------------------------------------------------------------------: |
+|                                          _Landing Page_                                           |
 
-| ![RegInfo](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/reginfo-sm.png) | 
-|:--:| 
-| *Contact Info* |
+| ![RegInfo](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/reginfo-sm.png) |
+| :---------------------------------------------------------------------------------------------: |
+|                                         _Contact Info_                                          |
 
-| ![Items](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/items-sm.png) | 
-|:--:| 
-| *Item Selection* |
-
+| ![Items](https://raw.githubusercontent.com/jamespro/eventregi/main/public/img/items-sm.png) |
+| :-----------------------------------------------------------------------------------------: |
+|                                      _Item Selection_                                       |
 
 ## Tech used
-* JavaScript
+
+- JavaScript
 
 MERN stack:
-* MongoDB / Mongoose
-* Express
-* React
-* Node.js
 
-Also: 
-* Material UI - helps with layout and multi-step
-* Formik - easier form management
+- MongoDB / Mongoose
+- Express
+- React
+- Node.js
+
+Also:
+
+- Material UI - helps with layout and multi-step
+- Formik - easier form management
 
 ## Roadmap
 
 Future features may include:
-* Multi-page registration
-  * Demographic information
-  * * Conditional Demos
-  * Items
-  * Sessions
-  * Visa (and print a visa letter in PDF)
-  * Invite a friend (referral)
-  * Payment
-* Registrant admin: Update record
-* Upgrade / Add items
-* Exhibitor booth staff registration
-* Event admin
-  * Use "react-admin" as admin code?
-  * Create, View, Edit, Delete
-* Reporting with graphic packages
+
+- Multi-page registration
+  - Demographic information
+  - - Conditional Demos
+  - Items
+  - Sessions
+  - Visa (and print a visa letter in PDF)
+  - Invite a friend (referral)
+  - Payment
+- Registrant admin: Update record
+- Upgrade / Add items
+- Exhibitor booth staff registration
+- Event admin
+  - Use "react-admin" as admin code?
+  - Create, View, Edit, Delete
+- Reporting with graphic packages
 
 ## TODO - Currently Working On
-* Review step: 
-  * Need to finish defining/setting up the Review route and files
-  * Compare Items to Review
-  * Items save to DB, user redirected to review step. 
-  * **CREATING ReviewReginfo and ReviewItems to get the content onto the Review page... defining getUser in api.js to get the user info... Go over to the API now**
-  * Retrieve items
-  * Display on page
-  * Show prices
-  * UUID is in the URL, so can develop the "retrieve from abandonment"
-* Use state or context to keep the UUID, maybe other info?
-* 
+
+- Review step:
+  - Need to finish defining/setting up the Review route and files
+  - Compare Items to Review
+  - Items save to DB, user redirected to review step.
+  - **CREATING ReviewReginfo and ReviewItems to get the content onto the Review page... defining getUser in api.js to get the user info... Go over to the API now**
+  - Retrieve items
+  - Display on page
+  - Show prices
+  - UUID is in the URL, so can develop the "retrieve from abandonment"
+- Use state or context to keep the UUID, maybe other info?
+-
 
 ## TODO - MVP v1
+
 - [x] FILL IN README
 - [ ] Header: Add graphic banner
 - [ ] Nav: make future steps not clickable (or switch to use MUI stepper)
@@ -90,7 +96,7 @@ Future features may include:
 - [ ] Item: Do I need one schema for ITEM? And another for ITEMS?
 - [ ] Item: Need to loop through adding items, unlike when adding one user?
 - [ ] FORMS/Formik: initial values, what to do for this? e.g. uuid
-- [ ] FORMS/Formik: passing by 
+- [ ] FORMS/Formik: passing by
 - [ ] Get uuid from localStorage, or if not in localstorage, then URL params
 - [ ] v2 put UUID into route so you can track progress, return to step
 - [ ] Route: /attendee/demo/uuid = demos - should it grab the showcode from the UUID record? or put into URL?
@@ -110,6 +116,7 @@ Future features may include:
 - [ ] Confirm step: return an ordernumber, order details after submit successfully
 
 ## TODO - MVP v2
+
 - [ ] Showcode: Have pages show something specific based on showcode
 - [ ] Header & Nav: Replace Nav with MaterialUI Stepper?
 - [ ] Layout: MUI: Make fields area "bigger"? Remove border? (maybe postpone this)
@@ -117,16 +124,17 @@ Future features may include:
 - [ ] Reginfo: Remove "use address for payment details"?
 
 ## DONE
+
 - [x] ADD SIZZLE
 - [x] DESIGN: LANDING PAGE (Add a step with just image and arrow?) (https://www.mongodb.com/live)
 - [x] Change TITLE, metadata, favicon
 - [x] Hook up to database
 - [x] Database: Save submitted information to MongoDB
 - [x] Fix browser error on step 1
-- [x] Reginfo: Pull Countries from a data source 
+- [x] Reginfo: Pull Countries from a data source
 - [x] Make API url configurable to use remote when on hosting and local api when localhost
 - [x] Confirm: Link to return to start
-- [x] UUID library - node: Check out this package and add 
+- [x] UUID library - node: Check out this package and add
 - [x] Move checkout code to its own repo
 - [x] Set up routes on default screen so that checkout is moved to separate route
 - [x] Route: / make it a landing page with link to AT reginfo
@@ -136,7 +144,9 @@ Future features may include:
 - [x] Reginfo: add field for regStatus - temp, active, or inactive
 - [x] Reginfo: put showcode into user record so we know what event they are registering for
 - [x] Reginfo: when checking email address, also check against same showcode
+
 ## Improvements / Optimizations
+
 - [ ] Nav: put text below step, to save space?
 - [ ] Layout: wider, taller? Test on mobile
 - [ ] Payment: Accept/validate other types of credit cards
@@ -153,4 +163,3 @@ Future features may include:
 - [ ] Send confirmation email
 - [ ] Auth: Add final step to ask user if they want to add a username and email, for authentication and future login
 - [ ] Reginfo: Zipcode, lookup and set state and maybe country
-
